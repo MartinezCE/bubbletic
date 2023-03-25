@@ -1,26 +1,17 @@
 const menuData = [
   {
-    id: 2,
+    id: "#services",
     title: "Services",
-    path: "/",
     newTab: false,
   },
   {
-    id: 33,
+    id: "#culture",
     title: "Culture",
-    path: "/",
     newTab: false,
   },
   {
-    id: 22,
-    title: "Fees",
-    path: "/",
-    newTab: false,
-  },
-  {
-    id: 3,
+    id: "#contact",
     title: "Contact",
-    path: "/",
     newTab: false,
   },
 ];
