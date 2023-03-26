@@ -4,7 +4,6 @@ const brandsData = [
   {
     id: 1,
     name: "Wimet",
-    href: "https://www.wimet.co/",
     image: "/images/brands/wimet-logo-blue.svg",
   },
 ];
@@ -16,9 +15,7 @@ const Brands = () => {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div
-              className="wow fadeInUp flex flex-wrap items-center justify-center rounded-md bg-primary bg-opacity-10 py-8 px-8 dark:bg-body-color dark:bg-opacity-90 sm:px-10 md:py-[40px] md:px-[50px] xl:p-[50px] 2xl:py-[60px] 2xl:px-[70px]"
-              data-wow-delay=".1s
-              "
+              className="flex flex-wrap items-center justify-center dark:border-dashed border-b border-t border-body-color/[.15] dark:border-white/[.15] py-8 px-8 sm:px-10 md:py-[40px] md:px-[50px] xl:p-[50px] 2xl:py-[60px] 2xl:px-[70px]"
             >
               {brandsData.map((brand) => (
                 <SingleBrand key={brand.id} brand={brand} />
@@ -42,7 +39,7 @@ const SingleBrand = ({ brand }) => {
         href={href}
         target="_blank"
         rel="nofollow noreferrer"
-        className="relative h-10 w-full opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0 dark:opacity-60 dark:hover:opacity-100"
+        className="relative h-10 w-full opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0 dark:opacity-60 dark:hover:opacity-100 dark:hover:grayscale"
       >
         <Image src={image} alt={name} fill />
       </a>

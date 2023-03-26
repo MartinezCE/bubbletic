@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import SectionTitle from '../Common/SectionTitle';
 
 const AboutSectionTwo = () => {
   return (
