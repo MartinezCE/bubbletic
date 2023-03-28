@@ -21,7 +21,8 @@ export const Contact = () => {
   const handleSubmit = async (event) => {
   event.preventDefault();
   try {
-    const response = await fetch("https://formsubmit.co/ajax/60bebd6c495d90c818b096427d464c18", {
+    if(formData.email != '' && formData.name != '' && formData.message != '') {
+      const response = await fetch("https://formsubmit.co/ajax/60bebd6c495d90c818b096427d464c18", {
       method: "POST",
       headers: { 
           'Content-Type': 'application/json',
@@ -33,27 +34,32 @@ export const Contact = () => {
         message: formData.message
       })
     });
+    
+    
     if (response.ok) {
-   
-      const Toast = Swal.mixin({
-        toast: true,
-        position: 'top-end',
+      Swal.fire({
+        icon: 'success',
+        title: 'Data sent.',
+        text: 'The form data has been successfully submitted.',
         showConfirmButton: false,
         timer: 3000,
         timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        willClose: () => {
           window.location.href = "https://www.bubbletic.com"
         }
       })
-      
-      Toast.fire({
-        icon: 'success',
-        title: 'Signed in successfully'
-      })
     } else {
      throw new Error('Error submitting form data.');
+      }
+    } else {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Warning',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        text: 'Please fill out all required fields'
+      });
     }
   } catch (error) {
     Swal.fire({
@@ -76,7 +82,7 @@ export const Contact = () => {
         <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base font-medium leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
         Get in touch with us today and let's start building your dream project together! Fill out the form below and we'll get back to you as soon as possible.
         </p>
-        <form>
+        <form onSubmit={handleSubmit}>
           <input type="hidden" name="_captcha" value="false" />
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2">
@@ -137,7 +143,7 @@ export const Contact = () => {
               </div>
             </div>
             <div className="w-full px-4">
-              <button  onClick={handleSubmit} type="submit" className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp"
+              <button   type="submit" className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp"
               >
                 Submit 
               </button>
