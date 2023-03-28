@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import SectionTitle from '../Common/SectionTitle';
 
 const AboutSectionTwo = () => {
   return (
@@ -22,10 +21,10 @@ const AboutSectionTwo = () => {
                   and can develop the best solution for you.
                 </p>
               </div>
-              <Image width={400} height={300} src="/images/culture-01.svg" />
+              <Image className="dark:opacity-80" width={400} height={300} src="/images/culture/culture-01.svg" />
             </div>
             <div className="flex flex-col-reverse items-center justify-center gap-y-4 gap-x-10 md:flex-row">
-              <Image width={400} height={300} src="/images/culture-02.svg" />
+              <Image className="dark:opacity-80" width={400} height={300} src="/images/culture/culture-02.svg" />
               <div className="md:max-w-[600px]">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                   Driving Innovation and Effective Communication
