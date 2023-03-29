@@ -1,25 +1,37 @@
-import Image from "next/image";
-
-const brandsData = [
-  {
-    id: 1,
-    name: "Wimet",
-    image: "/images/brands/wimet-logo-blue.svg",
-  },
-];
+import Image from 'next/image';
 
 const Brands = () => {
   return (
-    <section className="pt-16">
+    <section className="py-16 dark:bg-white/90 border-b border-t border-body-color/[.15] dark:border-white/[.15]">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
-            <div
-              className="flex flex-wrap items-center justify-center dark:border-dashed border-b border-t border-body-color/[.15] dark:border-white/[.15] py-8 px-8 sm:px-10 md:py-[40px] md:px-[50px] xl:p-[50px] 2xl:py-[60px] 2xl:px-[70px]"
-            >
-              {brandsData.map((brand) => (
-                <SingleBrand key={brand.id} brand={brand} />
-              ))}
+            <div className="relative py-8 px-8 dark:border-dashed sm:px-10 md:py-[40px] md:px-[50px] xl:p-[50px] 2xl:py-[60px] 2xl:px-[70px]">
+              <div className="container flex max-w-[800px] items-center py-8 opacity-70 grayscale transition duration-300 ease-in hover:opacity-100 hover:grayscale-0 dark:opacity-60 dark:hover:opacity-100">
+                <div className="w-[380px] gap-y-8">
+                  <Image
+                    src="/images/brands/wimet/logo.svg"
+                    height={20}
+                    width={120}
+                  />
+                  <p className="mt-6 text-body-color">
+                    Development of a workplace manager to simplify employee
+                    management, with a booking system. Web and mobile app.
+                  </p>
+                </div>
+                <Image
+                  className="absolute right-0 sm:hidden lg:block"
+                  src="/images/brands/wimet/web-mockup.png"
+                  height={20}
+                  width={500}
+                />
+                <Image
+                  className="absolute -right-[180px] -top-16 sm:hidden lg:block"
+                  src="/images/brands/wimet/app-mockup.png"
+                  height={20}
+                  width={420}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -29,20 +41,3 @@ const Brands = () => {
 };
 
 export default Brands;
-
-const SingleBrand = ({ brand }) => {
-  const { href, image, name } = brand;
-
-  return (
-    <div className="mx-3 flex w-full max-w-[160px] items-center justify-center py-[15px] sm:mx-4 lg:max-w-[130px] xl:mx-6 xl:max-w-[150px] 2xl:mx-8 2xl:max-w-[160px]">
-      <a
-        href={href}
-        target="_blank"
-        rel="nofollow noreferrer"
-        className="relative h-10 w-full opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0 dark:opacity-60 dark:hover:opacity-100 dark:hover:grayscale"
-      >
-        <Image src={image} alt={name} fill />
-      </a>
-    </div>
-  );
-};

@@ -132,12 +132,13 @@ export const Contact = () => {
                   Your Message
                 </label>
                 <textarea
-                value={formData.message}
+                  value={formData.message}
                   required
                   name="message"
                   onChange={handleInputChange}
                   rows="5"
                   placeholder="Enter your Message"
+                  spellCheck={false}
                   className="w-full resize-none rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                 ></textarea>
               </div>

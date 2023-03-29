@@ -5,9 +5,10 @@ const SectionTitle = ({
   width = '570px',
   center,
   mb = '100px',
+  className = '',
 }) => {
   return (
-    <section id={id} className="pt-20">
+    <section id={id} className={`pt-20 ${className}`}>
       <div
         className={`wow fadeInUp w-full ${center ? 'mx-auto text-center' : ''}`}
         data-wow-delay=".1s"

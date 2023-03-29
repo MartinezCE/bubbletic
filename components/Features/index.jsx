@@ -13,7 +13,7 @@ const Features = () => {
           <SectionTitle
             id="services"
             title="Services"
-            paragraph="Our expert team of developers and designers work tirelessly to turn your unique vision into exceptional digital solutions that drive your business forward."
+            // paragraph="Our expert team of developers and designers work tirelessly to turn your unique vision into exceptional digital solutions that drive your business forward."
             center
           />
 
