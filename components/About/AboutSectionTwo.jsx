@@ -10,20 +10,16 @@ const AboutSectionTwo = () => {
             className="wow fadeInUp flex flex-col gap-y-20"
             data-wow-delay=".2s"
           >
-            <SectionTitle
-              title="Culture"
-              className="m-auto"
-            />
+            <SectionTitle title="Cultura" className="m-auto" />
             <div className="flex flex-col items-center justify-center gap-y-4 gap-x-12 md:flex-row">
               <div className="md:max-w-[600px]">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Transparent and collaborative work
+                  Quiénes somos
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  We embrace a transparent and horizontal work culture. We
-                  foster innovation and encourage open communication with our
-                  clients. This ensures that we understand your needs and can
-                  develop the best solution for you.
+                  Somos emprendedores y nos apasiona desarrollar productos que
+                  enamoran a los clientes. Poseemos una cultura horizontal donde
+                  todos aportamos a una idea.
                 </p>
               </div>
               <Image
@@ -42,12 +38,12 @@ const AboutSectionTwo = () => {
               />
               <div className="md:max-w-[600px]">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Innovation and effective communication
+                  Nuestra misión
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  At Bubbletic, we believe in a culture of constant learning and
-                  growth, both individually and as a team, to provide our
-                  clients with the best possible experience.
+                  Buscamos ser el partner estratégico de las startups, brindando
+                  nuestro conocimiento y experiencia en el desarrollo de
+                  software para ayudarles a lograr sus objetivos de negocio.
                 </p>
               </div>
             </div>

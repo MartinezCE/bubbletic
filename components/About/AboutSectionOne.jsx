@@ -1,5 +1,5 @@
-import Image from "next/image";
-import SectionTitle from "../Common/SectionTitle";
+import Image from 'next/image';
+import SectionTitle from '../Common/SectionTitle';
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -24,8 +24,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Our process"
-                paragraph="At Bubbletic, we turn complex problems into elegant software solutions. With our experienced team of developers and designers, we work closely with clients to create custom software solutions that exceed expectations. Whether you need frontend or backend development services, we're here to help you bring your ideas to life."
+                title="Nuestro compromiso"
+                paragraph="Garantizamos un proceso de desarrollo ágil y eficiente, con una comunicación clara y constante con nuestros clientes. Creemos en la importancia de trabajar de manera colaborativa y transparente para lograr los objetivos de nuestros clientes y acompañarlos en su camino al éxito."
                 mb="44px"
               />
 
@@ -35,15 +35,15 @@ const AboutSectionOne = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Requirement gathering" />
-                    <List text="Scope definition" />
-                    <List text="Prototyping" />
+                    <List text="Soluciones integrales de desarrollo de software" />
+                    <List text="Enfoque en startups que buscan crecer" />
+                    <List text="Adaptación a necesidades específicas" />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Design and development" />
-                    <List text="Testing and Quality Assurance" />
-                    <List text="Delivery and deployment" />
+                    <List text="Diseño de MVP y lanzamiento de producto completo" />
+                    <List text="Trabajo personalizado con clientes" />
+                    <List text="Testeo de calidad" />
                   </div>
                 </div>
               </div>

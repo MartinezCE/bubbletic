@@ -25,9 +25,9 @@ const featuresData = [
         ></path>
       </svg>
     ),
-    title: 'Web development',
+    title: 'Desarrollo web',
     paragraph:
-      'Build and design custom web applications to meet your specific needs, including both frontend and backend development.',
+      'Construir y diseñar aplicaciones web personalizadas para satisfacer necesidades específicas, incluyendo el desarrollo tanto del frontend como del backend.',
   },
   {
     id: 1,
@@ -63,9 +63,9 @@ const featuresData = [
         ></path>
       </svg>
     ),
-    title: 'Mobile app development',
+    title: 'Desarrollo mobile',
     paragraph:
-      'High-quality mobile applications for iOS and Android devices, leveraging the latest technology and design best practices',
+      'Aplicaciones móviles de alta calidad para dispositivos iOS y Android, aprovechando la última tecnología y las mejores prácticas de diseño.',
   },
   {
     id: 1,
@@ -86,9 +86,9 @@ const featuresData = [
         ></path>
       </svg>
     ),
-    title: 'API development',
+    title: 'Desarrollo de APIS',
     paragraph:
-      'Powerful APIs that enable seamless integration between different software applications and systems.',
+      'APIs potentes que permiten la integración perfecta entre diferentes aplicaciones y sistemas de software.',
   },
   {
     id: 1,
@@ -111,9 +111,9 @@ const featuresData = [
         ></path>
       </svg>
     ),
-    title: 'E-commerce solutions',
+    title: 'Soluciones E-commerce',
     paragraph:
-      'Comprehensive e-commerce solutions that enable you to sell products and services online, including shopping carts, payment processing, and inventory management systems.',
+      'Soluciones integrales de comercio electrónico que te permiten vender productos y servicios en línea, incluyendo carritos de compra, procesamiento de pagos y sistemas de gestión de inventario.',
   },
   {
     id: 1,
@@ -143,9 +143,9 @@ const featuresData = [
         ></path>
       </svg>
     ),
-    title: 'Cloud computing and hosting',
+    title: 'Cloud y hosting',
     paragraph:
-      'Take advantage of the power of the cloud by building, deploying, and hosting your applications on cloud platforms like AWS, Google Cloud, or Microsoft Azure.',
+      'Aprovechamos el poder de la nube construyendo, implementando y alojando aplicaciones en plataformas de nube como AWS, Google Cloud o Microsoft Azure.',
   },
   {
     id: 1,
@@ -188,9 +188,9 @@ const featuresData = [
         ></path>
       </svg>
     ),
-    title: 'IT consulting',
+    title: 'Consultoría IT',
     paragraph:
-      'Ongoing IT consulting and software maintenance services to ensure that your applications and systems continue to run smoothly and stay up-to-date.',
+      'Consultoría en tecnología de la información y servicios de mantenimiento de software continuos para asegurar que los sistemas sigan funcionando sin problemas y se mantengan actualizados.',
   },
 ];
 export default featuresData;

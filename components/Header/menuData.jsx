@@ -1,17 +1,17 @@
 const menuData = [
   {
     id: "#services",
-    title: "Services",
+    title: "Servicios",
     newTab: false,
   },
   {
     id: "#culture",
-    title: "Culture",
+    title: "Cultura",
     newTab: false,
   },
   {
     id: "#contact",
-    title: "Contact",
+    title: "Contacto",
     newTab: false,
   },
 ];
