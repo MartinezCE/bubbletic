@@ -12,7 +12,7 @@ const Features = () => {
         <div className="container">
           <SectionTitle
             id="services"
-            title="Services"
+            title="Servicios"
             // paragraph="Our expert team of developers and designers work tirelessly to turn your unique vision into exceptional digital solutions that drive your business forward."
             center
           />

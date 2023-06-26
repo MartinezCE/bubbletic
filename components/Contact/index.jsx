@@ -1,74 +1,78 @@
-"use client";
-import {  useState } from "react";
-import Swal from "sweetalert2";
-
+'use client';
+import { useState } from 'react';
+import Swal from 'sweetalert2';
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
   });
-  
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
-  
+
   const handleSubmit = async (event) => {
-  event.preventDefault();
-  try {
-    if(formData.email != '' && formData.name != '' && formData.message != '') {
-      const response = await fetch("https://formsubmit.co/ajax/60bebd6c495d90c818b096427d464c18", {
-      method: "POST",
-      headers: { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-      },
-      body: JSON.stringify({
-        name: formData.name,
-        email:formData.email,
-        message: formData.message
-      })
-    });
-    
-    
-    if (response.ok) {
-      Swal.fire({
-        icon: 'success',
-        title: 'Data sent.',
-        text: 'The form data has been successfully submitted.',
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        willClose: () => {
-          window.location.href = "https://www.bubbletic.com"
+    event.preventDefault();
+    try {
+      if (
+        formData.email != '' &&
+        formData.name != '' &&
+        formData.message != ''
+      ) {
+        const response = await fetch(
+          'https://formsubmit.co/ajax/60bebd6c495d90c818b096427d464c18',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Accept: 'application/json',
+            },
+            body: JSON.stringify({
+              name: formData.name,
+              email: formData.email,
+              message: formData.message,
+            }),
+          }
+        );
+
+        if (response.ok) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Data sent.',
+            text: 'The form data has been successfully submitted.',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            willClose: () => {
+              window.location.href = 'https://www.bubbletic.com';
+            },
+          });
+        } else {
+          throw new Error('Error submitting form data.');
         }
-      })
-    } else {
-     throw new Error('Error submitting form data.');
+      } else {
+        Swal.fire({
+          icon: 'warning',
+          title: 'Warning',
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          text: 'Please fill out all required fields',
+        });
       }
-    } else {
+    } catch (error) {
       Swal.fire({
-        icon: 'warning',
-        title: 'Warning',
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        text: 'Please fill out all required fields'
+        icon: 'error',
+        title: 'Error',
+        text: 'An error occurred while submitting the form. Please contact support@bubbletic.com',
       });
     }
-  } catch (error) {
-    Swal.fire({
-      icon: 'error',
-      title: 'Error',
-      text: 'An error occurred while submitting the form. Please contact support@bubbletic.com'
-    });
-  }
-  
   };
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
@@ -77,10 +81,11 @@ export const Contact = () => {
         data-wow-delay=".2s"
       >
         <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white">
-          Have any questions?
+          ¿Preguntas?
         </h3>
         <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base font-medium leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
-        Get in touch with us today and let's start building your dream project together! Fill out the form below and we'll get back to you as soon as possible.
+          Completa el formulario a continuación y te responderemos lo antes
+          posible.
         </p>
         <form onSubmit={handleSubmit}>
           <input type="hidden" name="_captcha" value="false" />
@@ -91,16 +96,16 @@ export const Contact = () => {
                   htmlFor="name"
                   className="mb-3 block text-sm font-medium text-dark dark:text-white"
                 >
-                  Your Name
+                  Nombre
                 </label>
                 <input
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
                   type="text"
-                  placeholder="Enter your name"
+                  placeholder="Ingrese su nombre"
                   required
-                  className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                  className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-gray-100 dark:shadow-signUp"
                 />
               </div>
             </div>
@@ -110,16 +115,16 @@ export const Contact = () => {
                   htmlFor="email"
                   className="mb-3 block text-sm font-medium text-dark dark:text-white"
                 >
-                  Your Email
+                  Email
                 </label>
                 <input
                   name="email"
                   type="email"
                   onChange={handleInputChange}
                   value={formData.email}
-                  placeholder="Enter your email"
+                  placeholder="Ingrese su email"
                   required
-                  className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                  className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-gray-100 dark:shadow-signUp"
                 />
               </div>
             </div>
@@ -129,7 +134,7 @@ export const Contact = () => {
                   htmlFor="message"
                   className="mb-3 block text-sm font-medium text-dark dark:text-white"
                 >
-                  Your Message
+                  Mensaje
                 </label>
                 <textarea
                   value={formData.message}
@@ -137,21 +142,23 @@ export const Contact = () => {
                   name="message"
                   onChange={handleInputChange}
                   rows="5"
-                  placeholder="Enter your Message"
+                  placeholder="Ingrese su mensaje"
                   spellCheck={false}
-                  className="w-full resize-none rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
+                  className="w-full resize-none rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-gray-100 dark:shadow-signUp"
                 ></textarea>
               </div>
             </div>
             <div className="w-full px-4">
-              <button   type="submit" className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp"
+              <button
+                type="submit"
+                className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp"
               >
-                Submit 
+                Enviar
               </button>
             </div>
           </div>
-          <input type="hidden" name="_next" value="https://bubbletic.com"/>
-          <input type="hidden" name="_template" value="table"/>
+          <input type="hidden" name="_next" value="https://bubbletic.com" />
+          <input type="hidden" name="_template" value="table" />
         </form>
         <div className="absolute top-0 left-0 z-[-1]">
           <svg
