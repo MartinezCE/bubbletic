@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Brands = () => {
   return (
-    <section className="overflow-hidden border-b border-t border-body-color/[.15] py-16 dark:border-white/[.15] dark:bg-white/90">
+    <section className="overflow-hidden border-b border-t border-body-color/[.15] md:py-16 dark:border-white/[.15] dark:bg-white/90">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">

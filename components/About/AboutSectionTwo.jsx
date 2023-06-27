@@ -3,11 +3,11 @@ import SectionTitle from '../Common/SectionTitle';
 
 const AboutSectionTwo = () => {
   return (
-    <section className="py-16 md:py-20 lg:py-28" id="culture">
+    <section id="culture">
       <div className="container">
         <div className="w-full px-4">
           <div
-            className="wow fadeInUp flex flex-col gap-y-20"
+            className="wow fadeInUp flex flex-col gap-y-10"
             data-wow-delay=".2s"
           >
             <SectionTitle title="Cultura" className="m-auto" />

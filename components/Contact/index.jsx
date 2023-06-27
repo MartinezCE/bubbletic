@@ -44,8 +44,8 @@ export const Contact = () => {
         if (response.ok) {
           Swal.fire({
             icon: 'success',
-            title: 'Data sent.',
-            text: 'The form data has been successfully submitted.',
+            title: '¡Éxito!',
+            text: 'El formulario se envió correctamente',
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true,
@@ -59,18 +59,18 @@ export const Contact = () => {
       } else {
         Swal.fire({
           icon: 'warning',
-          title: 'Warning',
+          title: 'Atención',
           showConfirmButton: false,
           timer: 3000,
           timerProgressBar: true,
-          text: 'Please fill out all required fields',
+          text: 'Por favor complete los campos obligatorios.',
         });
       }
     } catch (error) {
       Swal.fire({
         icon: 'error',
         title: 'Error',
-        text: 'An error occurred while submitting the form. Please contact support@bubbletic.com',
+        text: 'Ocurrió un error al enviar el formulario. Por favor, contactarse a través del mail soporte@bubbletic.com',
       });
     }
   };
@@ -96,7 +96,7 @@ export const Contact = () => {
                   htmlFor="name"
                   className="mb-3 block text-sm font-medium text-dark dark:text-white"
                 >
-                  Nombre
+                  Nombre *
                 </label>
                 <input
                   name="name"
@@ -104,7 +104,6 @@ export const Contact = () => {
                   onChange={handleInputChange}
                   type="text"
                   placeholder="Ingrese su nombre"
-                  required
                   className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-gray-100 dark:shadow-signUp"
                 />
               </div>
@@ -115,7 +114,7 @@ export const Contact = () => {
                   htmlFor="email"
                   className="mb-3 block text-sm font-medium text-dark dark:text-white"
                 >
-                  Email
+                  Email *
                 </label>
                 <input
                   name="email"
@@ -123,7 +122,6 @@ export const Contact = () => {
                   onChange={handleInputChange}
                   value={formData.email}
                   placeholder="Ingrese su email"
-                  required
                   className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-gray-100 dark:shadow-signUp"
                 />
               </div>
@@ -134,11 +132,10 @@ export const Contact = () => {
                   htmlFor="message"
                   className="mb-3 block text-sm font-medium text-dark dark:text-white"
                 >
-                  Mensaje
+                  Mensaje *
                 </label>
                 <textarea
                   value={formData.message}
-                  required
                   name="message"
                   onChange={handleInputChange}
                   rows="5"
